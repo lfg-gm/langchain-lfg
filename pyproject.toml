@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "langchain-lfg"
+version = "0.1.0"
+description = "LangChain tools for LFG Alarm: set real alarms on a phone, and ring it, from an agent."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+authors = [{ name = "LFG Alarm", email = "support@lfg.gm" }]
+keywords = ["langchain", "langchain-tools", "alarm", "phone", "notification", "mcp", "agent"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Topic :: Communications",
+]
+dependencies = ["langchain-core>=0.3.0", "lfg-alarm>=0.2.0"]
+
+[project.optional-dependencies]
+test = ["pytest", "langchain-tests"]
+
+[project.urls]
+Homepage = "https://lfg.gm/developers"
+Source = "https://github.com/lfg-gm/langchain-lfg"
+Issues = "https://github.com/lfg-gm/langchain-lfg/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["langchain_lfg"]
